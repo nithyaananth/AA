@@ -1,0 +1,32 @@
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top:100px;
+  }
+  
+  .pagination ul {
+    list-style-type: none;
+    padding: 25px;
+    display: flex;
+  }
+  
+  .pagination li {
+    margin: 0 20px;
+  }
+  
+  .pagination a {
+    display: red;
+    padding: 5px 10px;
+    background-color: #be6969;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+   
+  }
+  
+  .pagination a:hover {
+    background-color: aquamarine;
+  }
+  

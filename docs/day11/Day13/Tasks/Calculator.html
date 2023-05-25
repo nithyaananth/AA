@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="./Calculator.css">
+
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+  integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+  crossorigin="anonymous">
+
+   
+  
+</head>
+<body>
+  <div class="container">
+    <div class="calculator">
+     
+      <input type="text" id="result" readonly>
+      <div class="btn-container">
+        <button class="btn btn-secondary"  onclick="addToExpression('7')">7</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('8')">8</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('9')">9</button>
+        <button class="btn btn-primary"  onclick="addToExpression('/')">÷</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('4')">4</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('5')">5</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('6')">6</button>
+        <button class="btn btn-primary"  onclick="addToExpression('*')">*</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('1')">1</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('2')">2</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('3')">3</button>
+        <button class="btn btn-primary"  onclick="addToExpression('-')">-</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('0')">0</button>
+        <button class="btn btn-secondary"  onclick="addToExpression('.')">.</button>
+        <button class="btn btn-primary"  onclick="addToExpression('+')">+</button>
+        <button class="btn btn-success"  onclick="evaluateExpression()">=</button>
+        <button class="btn btn-danger"  onclick="clearExpression()">C</button>
+      </div>
+      <div class="memory-btn-container">
+        <button class="btn btn-info" onclick="addToMemory()">M+</button>
+        <button class="btn btn-info" onclick="recallMemory()">M</button>
+        <button class="btn btn-info" onclick="clearMemory()">MC</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <script>
+    function addToExpression(value) {
+  const resultInput = document.getElementById('result');
+  resultInput.value += value;
+}
+
+function evaluateExpression() {
+  const resultInput = document.getElementById('result');
+  const expression = resultInput.value;
+  let result;
+
+  try {
+    result = eval(expression);
+  } catch (error) {
+    result = 'Error';
+  }
+
+  resultInput.value = result;
+}
+
+function clearExpression() {
+  const resultInput = document.getElementById('result');
+  resultInput.value = '';
+}
+
+  </script> 
+  </body>
+  </html>
+  
+
+
+
+  
