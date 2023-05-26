@@ -1,0 +1,42 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 3f ;
+    text-align: center;
+    background-color: #9cc1df;
+    width: 25p;
+    
+} 
+
+.grid-item {
+    border: 5px solid rgb(11, 108, 219);
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+
+
+.item1 {
+    grid-column: 1/ span 4;
+}
+
+.item2 {
+ grid-column: 1;
+ grid-row:2 /span 3 ;
+}
+
+.item3 {
+    grid-column: 2 / span 2;
+    
+}
+
+.item4 {
+     grid-column: 4;
+   
+}
+
+.item5 {
+
+    grid-column:2 / span 3 ;
+}
