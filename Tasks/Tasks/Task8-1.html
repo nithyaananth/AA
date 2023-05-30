@@ -5,75 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS background-color</title>
-        <style>
-        .scrollable {
-            width: 200px;
-            height: 650px;
-            border: 1px solid antiquewhite;
-            overflow-x: hidden;
-            overflow-y: scroll;
+
+
+    <style>
+
+
+/* * {
+  box-sizing: border-box;
+} */
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+
+.scrollable {
+  width: 200px;
+  height: 400px;
+  border: 1px solid antiquewhite;
+  overflow-x: hidden;
+  overflow-y: scroll;
         }
-
-
- .left {
-  flex: 35%;
-  padding: 15px 0;
+     
+        @media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
 }
-
-.left h2 {
-  padding-left: 8px;
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .scrollable, .main, .right {
+    width: 100%;
+  }
 }
+ 
 
 
     </style>
 </head>
-<body>
-    
+  <div style="overflow:auto">   
 <div class="scrollable">
     
-        <h3>CSS Tutorial</h3>
-        <p>CSS Home</p>
-        <p>CSS Introduction</p>
-        <p>CSS Syntax</p>
-        <p>CSS Selectors</p>
-        <p>CSS How To</p>
-        <p>CSS Comments</p>
-        <p>CSS Colors</p>
+      <h3>CSS Tutorial</h3>
+        <div>CSS Home</div>
+        <div>CSS Introduction</div>
+        <div>CSS Syntax</div>
+        <div>CSS Selectors</div>
+        <div>CSS How To</div>
+        <div>CSS Comments</div>
+        <div>CSS Colors</div>
 
-          <div class="CSS Backgrounds">
-    <p onclick="myFunction()" class="dropbtn">CSS Backgrounds</button>
-    <div id="CSS Backgrounds" class="CSS Backgrounds-content">
-    <a href="#Background Color">Background Color</a>
-    <a href="#Background Image">Background Image</a>
-    <a href="#Background Repeat">Background Repeat</a>
-    <a href="#Background Attachment">Background Attachment</a>
-    <a href="#Background Shorthand">Background Shorthand</a>
-  </div>
-</div>
+        <lable for="CSS Backgrounds">Choice of background-color</lable>
+          <div>CSS Backgrounds</div>
+    <select id="CSS Backgrounds" class="CSS Backgrounds-content">
+    <option value="#Background Color">Background Color</option>
+    <option value="#Background Image">Background Image</option>
+    <option value="#Background Repeat">Background Repeat</option>
+    <option value="#Background Attachment">Background Attachment</option>
+    <option value="#Background Shorthand">Background Shorthand</option>
+      </select>
 
-        <p>CSS Borders</p>
-        <p>CSS Margins</p>
-        <p>CSS padding</p>
-        <p>CSS Height/Width</p>
-        <p>CSS Box Model</p>
-        <p>CSS Outline</p>
-        <p>CSS Text</p>
-        <p>CSS Fonts</p>
-        <p>CSS Icons</p>
-        <p>CSS Links</p>
-  
-   
-</div>
-
-
-<div class="right" style="background-color:#ddd;">
-    <h2>Page Content</h2>
+        <div>CSS Borders</div>
+        <div>CSS Margins</div>
+        <div>CSS padding</div>
+        <div>CSS Height/Width</div>
+        <div>CSS Box Model</div>
+        <div>CSS Outline</div>
+        <div>CSS Text</div>
+        <div>CSS Fonts</div>
+        <div>CSS Icons</div>
+        <div>CSS Links</div>
+        </div>
+      </div>
+      
+      <div class="main">
+       <p>The CSS background properties are used to add 
+            background effects for elements.</p> 
+           </div>
+     
+           
 
 </body>
 </html>
 
 
 
+ 
+ 
 
 
 
@@ -81,25 +107,5 @@
 
 
 
-
-
-
-
-<!--<div class="left" style="background-color:#bbb;">
-    <p>CSS Backgrounds</p>
-  <h2>Menu</h2>
-    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-    <ul id="myMenu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-      <li><a href="#">PHP</a></li>
-      <li><a href="#">Python</a></li>
-      <li><a href="#">jQuery</a></li>
-      <li><a href="#">SQL</a></li>
-      <li><a href="#">Bootstrap</a></li>
-      <li><a href="#">Node.js</a></li>
-    </ul>
-  </div>-->
 
 

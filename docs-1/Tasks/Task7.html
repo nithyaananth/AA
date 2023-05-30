@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Guvi JS Day 3</title>
+    </head>
+    <body>
+        <h1>Hello</h1>
+        <h2>This is an example for XML HTTP Request</h2>
+        <script>
+            console.log("Welcome to HTML JS")
+
+            function handleData(){
+               let data = JSON.parse(this.responseText)
+               console.log(data)
+
+               //a. Get all the countries from the Asia continent /region using the Filter function
+
+               /*let country1 = data.filter((e)=>
+               {
+                if(e.continents[0] == "Asia" || e.region[0] == "Asia")
+                {
+                    return true;
+                }
+                else {
+                    return false;
+
+                }
+               })
+              
+                 for(let i=0; i<data.length; i++){
+
+                    console.log (data[i].filter(data[i].region))
+                }
+            }*/
+
+
+            //b.Get all the countries with a population of less than 2 lakhs using Filter function
+
+           /* let country2 = data.filter((e)=>
+            {
+                if(e.population < 200000)
+                { 
+                    return true;
+
+                }else {
+                    return false;
+
+                }
+            })
+            console.log(country2);*/
+
+
+            //c. Print the following details name, capital, flag using forEach function
+
+
+           /* data.forEach((e)=>
+            {
+                console.log(e.name,e.capital,e.flag);
+
+            })*/
+
+
+
+            //d.Print the total population of countries using reduce function
+
+           /* let country3 = data.reduce((previousValue, currentValue) => {
+                return previousValue + currentValue.population;
+            },0)
+            console.log(cuntry3);*/
+
+
+            //e.Print the country which uses US Dollars as currency.
+
+           /* let country1 = data.filter((e)=> {
+                for (let i in e.currencies)
+                {
+                    if(e.currencies[i].name == "United States dollar")
+                    {
+                        return true;
+                    }else {
+                        return false;
+                    }
+                }
+            })
+            console.log(country1);*/
+
+
+     
+
+           const req=new XMLHttpRequest();
+            req.addEventListener('load',handleData)
+           // req.onload=(res)=>{
+               // console.log(JSON.parse(res.srcElement.responseText))
+            //}
+            req.open("GET","https://restcountries.com/v3.1/all")
+            req.send()
+        </script>
+    </body>
+ </html>                                                                                                                      
