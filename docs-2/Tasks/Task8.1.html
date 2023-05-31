@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <script>
+        function submitForm() {
+            // Get the values from the form
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var purchaseRating = document.querySelector('input[name="purchaseRating"]:checked').value;
+            var serviceRating = document.querySelector('input[name="serviceRating"]:checked').value;
+            var companyRating = document.querySelector('input[name="companyRating"]:checked').value;
+            var buyAgainLikelihood = document.querySelector('input[name="buyAgainLikelihood"]:checked').value;
+            var recommendProductLikelihood = document.querySelector('input[name="recommendProductLikelihood"]:checked').value;
+            var recommendCompanyLikelihood = document.querySelector('input[name="recommendCompanyLikelihood"]:checked').value;
+            var additionalComments = document.getElementById("additionalComments").value;
+
+            // Perform any validation or data processing as needed
+
+            // Send the form data to the server (you can replace this with your own code to handle the form data)
+            var formData = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                purchaseRating: purchaseRating,
+                serviceRating: serviceRating,
+                companyRating: companyRating,
+                buyAgainLikelihood: buyAgainLikelihood,
+                recommendProductLikelihood: recommendProductLikelihood,
+                recommendCompanyLikelihood: recommendCompanyLikelihood,
+                additionalComments: additionalComments
+            };
+
+            // You can use AJAX or fetch to send the data to the server
+            // Example using fetch:
+            fetch('/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => {
+                // Handle the response from the server
+                // e.g. show a success message or redirect to another page
+            })
+            .catch(error => {
+                // Handle any errors that occur during the request
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <p>Your Experience:</p>
+        <input type="radio" id="purchaseRating1" name="purchaseRating" value="very unsatisfied" required>
+        <label for="purchaseRating1">Very Unsatisfied</label><br>
+        <input type="radio" id="purchaseRating2" name="purchaseRating" value="unsatisfied" required>
+        <label for="purchaseRating2">Unsatisfied</label><br>
+        <input type="radio" id="purchaseRating3" name="purchaseRating" value="neutral" required>
+        <label for="purchaseRating3">Neutral</label><br>
+        <input type="radio" id="purchaseRating4" name="purchaseRating" value="satisfied" required>
+        <label for="purchaseRating4">Satisfied</label><br>
+        <input type="radio" id="purchaseRating5" name="purchaseRating" value="very satisfied" required>
+        <label for="purchaseRating5">Very Satisfied</label><br><br>
+
+        <!-- Similar radio inputs for serviceRating, companyRating, buyAgainLikelihood, recommendProductLikelihood, recommendCompanyLikelihood -->
+
+        <label for="additionalComments">Additional Comments or Suggestions:</label><br>
+        <textarea id="additionalComments" rows="4" cols="50"></textarea><br><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</body>
+</html>
+
+</body>
+</html>

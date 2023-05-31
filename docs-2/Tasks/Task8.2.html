@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+       <form action="/submit-form" method="POST">
+        <label for="firstName">First Name*:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name*:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="email">Email*:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <p>Your Experience*:</p>
+        <table>
+            <tr>
+                <th></th>
+                <th>veryUnsatisfied</th>
+                <th>unsatisfied</th>
+                <th>Neutral</th>
+                <th>Satisfied</th>
+                <th>VerySatisfied</th>
+            </tr>
+            <tr>
+                <td>Purchase</td>
+                <td><input type="radio" name="purchase" value="veryUnsatisfied"></td>
+                <td><input type="radio" name="purchase" value="unsatisfied"></td>
+                <td><input type="radio" name="purchase" value="neutral"></td>
+                <td><input type="radio" name="purchase" value="satisfied"></td>
+                <td><input type="radio" name="purchase" value="verySatisfied"></td>
+            </tr>
+            <tr>
+                <td>Service</td>
+                <td><input type="radio" name="service" value="veryUnsatisfied"></td>
+                <td><input type="radio" name="service" value="unsatisfied"></td>
+                <td><input type="radio" name="service" value="neutral"></td>
+                <td><input type="radio" name="service" value="satisfied"></td>
+                <td><input type="radio" name="service" value="verySatisfied"></td>
+            </tr>
+            <tr>
+                <td>Company Overall</td>
+                <td><input type="radio" name="company" value="veryUnsatisfied"></td>
+                <td><input type="radio" name="company" value="unsatisfied"></td>
+                <td><input type="radio" name="company" value="neutral"></td>
+                <td><input type="radio" name="company" value="satisfied"></td>
+                <td><input type="radio" name="company" value="verySatisfied"></td>
+            </tr>
+        </table><br>
+
+        <p>How likely are you to:</p>
+        <table>
+            <tr>
+                <th></th>
+                <th>very Unlikely</th>
+                <th>Unlikely</th>
+                <th>Neutral</th>
+                <th>likely</th>
+                <th>Very Unlikely</th>
+            </tr>
+            <tr>
+                <td>Buy from us again</td>
+                <td><input type="radio" name="veryUnlikely" value="veryUnlikely"></td>
+                <td><input type="radio" name="unlikely" value="unlikely"></td>
+                <td><input type="radio" name="neutral" value="neutral"></td>
+                <td><input type="radio" name="likely" value="likely"></td>
+                <td><input type="radio" name="veryLikely" value="veryLikely"></td>
+            </tr>
+            <tr>
+                <td>Recommend our product to others</td>
+                <td><input type="radio" name="veryUnlikely" value="veryUnlikely"></td>
+                <td><input type="radio" name="unlikely" value="unlikely"></td>
+                <td><input type="radio" name="neutral" value="neutral"></td>
+                <td><input type="radio" name="likely" value="likely"></td>
+                <td><input type="radio" name="veryLikely" value="veryLikely"></td>
+            </tr>
+            <tr>
+                <td>Recommend our company to others</td>
+                <td><input type="radio" name="veryUnlikely" value="veryUnlikely"></td>
+                <td><input type="radio" name="unlikely" value="unlikely"></td>
+                <td><input type="radio" name="neutral" value="neutral"></td>
+                <td><input type="radio" name="likely" value="likely"></td>
+                <td><input type="radio" name="veryLikely" value="veryLikely"></td>
+            </tr>
+        </table><br>
+
+        <label for="additionalComments">Additional Comments or Suggestions:</label><br>
+        <textarea id="additionalComments" name="additionalComments" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
