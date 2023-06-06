@@ -31,6 +31,7 @@ function createCountryCard(country) {
     weatherButton.innerText = 'Click for Weather';
   
     // Event listener for weather button click
+                  
     weatherButton.addEventListener('click', () => {
       getWeather(country);
     });

@@ -20,7 +20,7 @@ const displayBooks = async () => {
 
   bookList.innerHTML = '';
 
-  books.slice(0, 10).forEach((book) => {
+  books.slice(0,10).forEach((book) => {
     const li = document.createElement('li');
     li.innerHTML = `
       <strong>Title:</strong> ${book.name}<br>
@@ -29,7 +29,7 @@ const displayBooks = async () => {
       <strong>Authors:</strong> ${book.authors.join(', ')}<br>
       <strong>Publisher:</strong> ${book.publisher}<br>
       <strong>Released:</strong> ${book.released}<br>
-      <strong>Characters:</strong> ${book.characters.slice(0, 5).join(', ')}
+      <strong>Characters:</strong> ${book.characters.slice(0, 10).join(', ')}
     `;
     bookList.appendChild(li);
   });
@@ -51,6 +51,6 @@ const highlightSearchText = () => {
   });
 };
 
-searchInput.addEventListener('input', highlightSearchText);
+//searchInput.addEventListener('input', highlightSearchText);
 
 displayBooks();
